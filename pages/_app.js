@@ -1,21 +1,18 @@
 import '../styles/globals.css'
 import 'tailwindcss/tailwind.css'
-import { web3ReactProvider } from '@web3-react/core'
-import web3 from 'web3'
-
-
-
+import { Web3ReactProvider } from '@web3-react/core'
+import Web3 from 'web3'
 
 function getLibrary(provider) {
-  return new web3(provide)
+  return new Web3(provider)
 }
 
 function MyApp({ Component, pageProps }) {
   return (
-    <web3ReactProvider getLibrary={getLibrary}>
+    <Web3ReactProvider getLibrary={getLibrary}>
       <Component {...pageProps} />
-    </web3ReactProvider>
-  );
+    </Web3ReactProvider>
+  )
 }
 
 export default MyApp
